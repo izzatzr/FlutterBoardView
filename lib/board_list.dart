@@ -18,6 +18,7 @@ class BoardList extends StatefulWidget {
   final OnTapList? onTapList;
   final OnStartDragList? onStartDragList;
   final bool draggable;
+  final ScrollController? listWidgetsCtl;
 
   const BoardList({
     Key? key,
@@ -32,6 +33,7 @@ class BoardList extends StatefulWidget {
     this.onDropList,
     this.onTapList,
     this.onStartDragList,
+    this.listWidgetsCtl = ScrollController()
   }) : super(key: key);
 
   final int? index;
@@ -143,7 +145,10 @@ class BoardListState extends State<BoardList>
     widget.boardView!.listStates.insert(widget.index!, this);
 
     return Container(
+        margin: EdgeInsets.all(4.0),
         decoration: BoxDecoration(color: backgroundColor),
-        child: Wrap(children: listWidgets));
+        child: SingleChildScrollView(
+          controller: listWidgetsCtl,
+          child: Wrap(children: listWidgets));
   }
 }
