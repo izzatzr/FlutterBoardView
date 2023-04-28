@@ -148,7 +148,7 @@ class BoardListState extends State<BoardList>
         margin: EdgeInsets.all(4.0),
         decoration: BoxDecoration(color: backgroundColor),
         child: SingleChildScrollView(
-          controller: listWidgetsCtl,
+          controller: widget.listWidgetsCtl,
           child: Wrap(children: listWidgets));
   }
 }
