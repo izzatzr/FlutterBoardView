@@ -8,7 +8,7 @@ typedef void OnTapList(int? listIndex);
 typedef void OnStartDragList(int? listIndex);
 
 class BoardList extends StatefulWidget {
-  final List<Widget>? header;
+  final Widget? header;
   final Widget? footer;
   final List<BoardItem>? items;
   final Color? backgroundColor;
