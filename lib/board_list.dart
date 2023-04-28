@@ -109,11 +109,7 @@ class BoardListState extends State<BoardList>
           },
           child: Container(
             color: widget.headerBackgroundColor,
-            child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: widget.header!),
-          )));
+            child: widget.header!)));
     }
     if (widget.items != null) {
       listWidgets.add(Container(
@@ -171,10 +167,6 @@ class BoardListState extends State<BoardList>
     return Container(
         margin: EdgeInsets.all(8),
         decoration: BoxDecoration(color: backgroundColor),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: listWidgets,
-        ));
+        child: ListView(children: listWidgets));
   }
 }
