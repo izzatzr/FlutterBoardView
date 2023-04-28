@@ -67,15 +67,7 @@ class BoardViewExample extends StatelessWidget {
       },
       headerBackgroundColor: Color.fromARGB(255, 235, 236, 240),
       backgroundColor: Color.fromARGB(255, 235, 236, 240),
-      header: [
-        Expanded(
-            child: Padding(
-                padding: EdgeInsets.all(5),
-                child: Text(
-                  list.title!,
-                  style: TextStyle(fontSize: 20),
-                ))),
-      ],
+      header: Text(list.title!, style: TextStyle(fontSize: 20)),
       items: items,
     );
   }
