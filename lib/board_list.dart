@@ -33,7 +33,7 @@ class BoardList extends StatefulWidget {
     this.onDropList,
     this.onTapList,
     this.onStartDragList,
-    this.listWidgetsCtl = ScrollController()
+    this.listWidgetsCtl
   }) : super(key: key);
 
   final int? index;
@@ -149,6 +149,6 @@ class BoardListState extends State<BoardList>
         decoration: BoxDecoration(color: backgroundColor),
         child: SingleChildScrollView(
           controller: widget.listWidgetsCtl,
-          child: Wrap(children: listWidgets));
+          child: Wrap(children: listWidgets)));
   }
 }
